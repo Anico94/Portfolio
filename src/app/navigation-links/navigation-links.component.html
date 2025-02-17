@@ -1,1 +1,15 @@
-<div class="px-12">This is the text here</div>
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+  <ul class="flex space-x-12 font-bold uppercase">
+    <li class="hover-scale-by-10">
+      <a href="#about" class="hover:text-green-600">About</a>
+    </li>
+    <li class="hover-scale-by-10">
+      <a [routerLink]="['/']" fragment="projects" class="hover:text-green-600"
+        >Projects</a
+      >
+    </li>
+    <li class="hover-scale-by-10">
+      <a href="#experience" class="hover:text-green-600">Experience</a>
+    </li>
+  </ul>
+</div>

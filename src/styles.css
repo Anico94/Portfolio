@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import "tailwindcss/theme";
+@import "tailwindcss/utilities";
+@custom-variant dark (&:where(.dark, .dark *));
+@import url("https://fonts.googleapis.com/css2?family=Changa+One&display=swap");
+
+@theme {
+  /* --animate-fade-in-scale: fade-in-scale 0.3s ease-out; NOT CURRENTLY BEING USED. */
+}
+
+@layer components {
+  .icon {
+    @apply rounded-xl bg-green-300 dark:bg-green-600 h-12 w-12 flex justify-center items-center 
+    transition-all duration-400 hover:rounded-2xl hover:bg-green-500 dark:hover:bg-green-300 active:scale-90 
+    hover:inset-shadow-xs shadow-sm cursor-pointer dark:text-black hover:scale-110;
+  }
+  .hover-scale-by-10 {
+    @apply transition-transform transform hover:scale-110 duration-400 cursor-pointer;
+  }
+  .font-changa {
+    font-family: "Changa One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(20deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wave {
+  transform-origin: 70% 70%;
+  animation: wave 1.5s infinite ease-in-out;
+}

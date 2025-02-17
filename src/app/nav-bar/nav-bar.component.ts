@@ -7,6 +7,6 @@ import { SocialsComponent } from '../socials/socials.component';
   selector: 'app-nav-bar',
   imports: [NameComponent, NavigationLinksComponent, SocialsComponent],
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss',
+  styleUrl: './nav-bar.component.css',
 })
 export class NavBarComponent {}
