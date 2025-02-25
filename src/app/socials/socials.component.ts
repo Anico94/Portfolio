@@ -5,11 +5,10 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFileLines } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { DarkLightToggleComponent } from '../dark-light-toggle/dark-light-toggle.component';
 
 @Component({
   selector: 'app-socials',
-  imports: [LinkedIconComponent, FontAwesomeModule, DarkLightToggleComponent],
+  imports: [LinkedIconComponent, FontAwesomeModule],
   templateUrl: './socials.component.html',
   styleUrl: './socials.component.css',
 })
