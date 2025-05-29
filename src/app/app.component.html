@@ -1,14 +1,24 @@
-<div class="min-h-screen bg-green-100 dark:bg-green-1000 flex flex-col gap-10">
-  <app-nav-bar
+<div
+  class="relative min-h-screen bg-green-100 dark:bg-[#122118] flex flex-col gap-10 overflow-x-hidden"
+>
+  <div class="layout-container flex h-full grow flex-col">
+    <!-- Might still use the backdrop blur-->
+    <!-- <app-nav-bar
     class="fixed px-24 top-0 left-0 right-0 backdrop-blur-md bg-green-100/50 dark:bg-green-900/50 z-50"
-  ></app-nav-bar>
+  ></app-nav-bar> -->
 
-  <app-featured class="container mx-auto mt-30"></app-featured>
-  <button
-    id="projects"
-    (click)="toggleDarkMode()"
-    class="mt-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded"
-  >
-    Toggle Dark Mode
-  </button>
+    <!-- Swap to hamburger menu at 780px width-->
+    <app-nav-bar
+      class="flex items-center justify-between whitespace-nowrap border-b border-solid dark:border-b-[#264532] px-10 py-3"
+    ></app-nav-bar>
+
+    <app-featured class="container mx-auto mt-30"></app-featured>
+    <button
+      id="projects"
+      (click)="toggleDarkMode()"
+      class="mt-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded"
+    >
+      Toggle Dark Mode
+    </button>
+  </div>
 </div>

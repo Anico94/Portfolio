@@ -11,8 +11,8 @@
 
 @layer components {
   .icon {
-    @apply rounded-xl bg-green-300 dark:bg-green-600 h-12 w-12 flex justify-center items-center 
-    transition-all duration-400 hover:rounded-2xl hover:bg-green-500 dark:hover:bg-green-300 active:scale-90 
+    @apply rounded-xl bg-green-300 dark:bg-white h-8 w-8 flex justify-center items-center 
+    transition-all duration-400 hover:rounded-2xl hover:bg-green-500 dark:hover:bg-green-200 active:scale-90 
     hover:inset-shadow-xs shadow-sm cursor-pointer dark:text-black hover:scale-110;
   }
   .hover-scale-by-10 {
