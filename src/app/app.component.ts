@@ -4,6 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { FeaturedComponent } from './featured/featured.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
+    AboutMeComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
