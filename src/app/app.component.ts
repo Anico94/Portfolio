@@ -5,6 +5,8 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { FeaturedComponent } from './featured/featured.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ProjectTileComponent } from './project-tile/project-tile.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +18,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
     RouterLink,
     RouterLinkActive,
     AboutMeComponent,
+    ProjectTileComponent,
+    ProjectsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
