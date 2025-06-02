@@ -1,0 +1,25 @@
+<button
+  matIconButton
+  [matMenuTriggerFor]="menu"
+  aria-label="Example icon-button with a menu"
+>
+  <fa-icon [icon]="faBars" class="fa-lg text-white"></fa-icon>
+</button>
+<mat-menu class="mt-4" #menu="matMenu" xPosition="before">
+  <button mat-menu-item>
+    <fa-icon [icon]="faLinkedin" class="fa-lg text-white"></fa-icon>
+    <span>LinkedIn</span>
+  </button>
+  <button mat-menu-item>
+    <fa-icon [icon]="faGithub" class="fa-lg text-white"></fa-icon>
+    <span>GitHub</span>
+  </button>
+  <button mat-menu-item>
+    <fa-icon [icon]="faEnvelope" class="fa-lg text-white"></fa-icon>
+    <span>Email</span>
+  </button>
+  <button mat-menu-item>
+    <fa-icon [icon]="faFileLines" class="fa-lg text-white"></fa-icon>
+    <span>Resume</span>
+  </button>
+</mat-menu>

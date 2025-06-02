@@ -5,7 +5,12 @@
     alt="Graphic of Alex"
     class="w-8 h-8 object-contain rounded-2xl"
   />
-  <h2 class="text-white text-lg font-bold">Alex's Portfolio</h2>
+  <h2 class="text-white text-lg font-bold max-[300px]:hidden">
+    Alex's Portfolio
+  </h2>
 </div>
-<app-navigation-links class="dark:text-white"></app-navigation-links>
-<app-socials></app-socials>
+<app-navigation-links
+  class="dark:text-white max-[750px]:hidden"
+></app-navigation-links>
+<app-socials class="max-[750px]:hidden"></app-socials>
+<app-hamburger-nav-menu class="min-[750px]:hidden"></app-hamburger-nav-menu>
