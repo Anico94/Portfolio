@@ -19,8 +19,8 @@ export class SocialsComponent {
   public faFileLines: IconDefinition = faFileLines;
 
   //Links
-  public github: string = 'https://www.google.com';
-  public linkedIn: string = 'https://www.google.com';
-  public email: string = 'https://www.google.com';
-  public resume: string = 'https://www.google.com';
+  public gitHub: string = 'https://github.com/Anico94';
+  public linkedIn: string = 'https://www.linkedin.com/in/alexnicolaidis/';
+  public email: string = 'mailto:a.nicolaidis@outlook.com';
+  public resume: string = './Alex_Nicolaidis_Resume_2025.pdf';
 }
