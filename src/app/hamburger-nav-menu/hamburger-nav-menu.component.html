@@ -5,11 +5,24 @@
 >
   <fa-icon [icon]="faBars" class="fa-lg text-white"></fa-icon>
 </button>
-<mat-menu class="mt-4" #menu="matMenu" xPosition="before">
-  <button mat-menu-item>
-    <fa-icon [icon]="faLinkedin" class="fa-lg text-white"></fa-icon>
-    <span>LinkedIn</span>
-  </button>
+<mat-menu
+  class="mt-4 py-0 rounded-lg border border-[#366348]"
+  #menu="matMenu"
+  xPosition="before"
+>
+  <app-hamburger-menu-item
+    class="hover:bg-green-100"
+    label="LinkedIn"
+    [newTab]="true"
+    link="https://www.linkedin.com/in/alexnicolaidis/"
+    [fontAwesomeIcon]="faLinkedin"
+  ></app-hamburger-menu-item>
+  <a href="https://www.linkedin.com/in/alexnicolaidis/" target="_blank">
+    <button mat-menu-item>
+      <fa-icon [icon]="faLinkedin" class="fa-lg text-white"></fa-icon>
+      <span class="px-2">LinkedIn</span>
+    </button>
+  </a>
   <button mat-menu-item>
     <fa-icon [icon]="faGithub" class="fa-lg text-white"></fa-icon>
     <span>GitHub</span>

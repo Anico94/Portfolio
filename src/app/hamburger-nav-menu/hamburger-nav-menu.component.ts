@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { HamburgerMenuItemComponent } from '../hamburger-menu-item/hamburger-menu-item.component';
+import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import {
@@ -15,14 +16,14 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-hamburger-nav-menu',
   imports: [
-    MatIcon,
+    HamburgerMenuItemComponent,
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
     FontAwesomeModule,
   ],
   templateUrl: './hamburger-nav-menu.component.html',
-  styleUrl: './hamburger-nav-menu.component.css',
+  styleUrl: './hamburger-nav-menu.component.scss',
 })
 export class HamburgerNavMenuComponent {
   public faBars: IconDefinition = faBars;

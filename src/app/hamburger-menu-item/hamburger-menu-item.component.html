@@ -1,0 +1,11 @@
+<a [href]="link" [attr.target]="newTab ? '_blank' : '_self'">
+  <button mat-menu-item class="hover:bg-green-100">
+    <fa-icon [icon]="fontAwesomeIcon" class="fa-lg text-white"></fa-icon>
+    <span class="px-2"
+      >{{ label }}
+      @if(newTab){
+      <mat-icon class="ml-4">open_in_new</mat-icon>
+      }
+    </span>
+  </button>
+</a>
