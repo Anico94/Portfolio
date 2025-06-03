@@ -11,28 +11,42 @@
   xPosition="before"
 >
   <app-hamburger-menu-item
-    class="hover:bg-green-100"
+    label="About Me"
+    link="#about"
+    [fontAwesomeIcon]="faAboutMe"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
+    label="Projects"
+    link="#projects"
+    [fontAwesomeIcon]="faProjects"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
+    label="Contact Me"
+    link="#contact"
+    [fontAwesomeIcon]="faContactMe"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
     label="LinkedIn"
     [newTab]="true"
     link="https://www.linkedin.com/in/alexnicolaidis/"
     [fontAwesomeIcon]="faLinkedin"
   ></app-hamburger-menu-item>
-  <a href="https://www.linkedin.com/in/alexnicolaidis/" target="_blank">
-    <button mat-menu-item>
-      <fa-icon [icon]="faLinkedin" class="fa-lg text-white"></fa-icon>
-      <span class="px-2">LinkedIn</span>
-    </button>
-  </a>
-  <button mat-menu-item>
-    <fa-icon [icon]="faGithub" class="fa-lg text-white"></fa-icon>
-    <span>GitHub</span>
-  </button>
-  <button mat-menu-item>
-    <fa-icon [icon]="faEnvelope" class="fa-lg text-white"></fa-icon>
-    <span>Email</span>
-  </button>
-  <button mat-menu-item>
-    <fa-icon [icon]="faFileLines" class="fa-lg text-white"></fa-icon>
-    <span>Resume</span>
-  </button>
+  <app-hamburger-menu-item
+    label="GitHub"
+    [newTab]="true"
+    link="https://www.linkedin.com/in/alexnicolaidis/"
+    [fontAwesomeIcon]="faGithub"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
+    label="Email"
+    [newTab]="true"
+    link="https://www.linkedin.com/in/alexnicolaidis/"
+    [fontAwesomeIcon]="faEnvelope"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
+    label="Resume"
+    [newTab]="true"
+    link="https://www.linkedin.com/in/alexnicolaidis/"
+    [fontAwesomeIcon]="faFileLines"
+  ></app-hamburger-menu-item>
 </mat-menu>

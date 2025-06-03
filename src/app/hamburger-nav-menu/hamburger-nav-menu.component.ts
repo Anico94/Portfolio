@@ -9,7 +9,12 @@ import {
 } from '@fortawesome/angular-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCircleUser,
+  faComment,
+  faDiagramProject,
+  faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
 import { faFileLines } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -31,4 +36,7 @@ export class HamburgerNavMenuComponent {
   public faLinkedin: IconDefinition = faLinkedin;
   public faEnvelope: IconDefinition = faEnvelope;
   public faFileLines: IconDefinition = faFileLines;
+  public faAboutMe: IconDefinition = faCircleUser;
+  public faProjects: IconDefinition = faDiagramProject;
+  public faContactMe: IconDefinition = faComment;
 }

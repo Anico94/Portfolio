@@ -19,9 +19,7 @@ html {
 :root {
   @include mat.menu-overrides(
     (
-      item-label-text-color: white,
       container-color: #1b3124,
-      item-hover-state-layer-color: green,
     )
   );
 }
