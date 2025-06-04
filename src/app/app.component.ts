@@ -8,6 +8,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectTileComponent } from './project-tile/project-tile.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { TechologiesComponent } from './techologies/techologies.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { TechologiesComponent } from './techologies/techologies.component';
     ProjectTileComponent,
     ProjectsComponent,
     TechologiesComponent,
+    ContactComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
