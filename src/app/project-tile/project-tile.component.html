@@ -8,15 +8,11 @@
     Project {{ projectNumber }}: {{ projectTitle }}
   </p>
   <p class="text-green-300">{{ description }}</p>
-  <div
-    class="text-white rounded-lg border border-[#366348] bg-[#1b3124] flex align-middle justify-center py-2"
+  <a
+    matButton="filled"
+    class="flex align-middle justify-center py-2 cursor-pointer text-white rounded-lg border border-[#366348] bg-[#1b3124]"
+    href="{{ gitHubLink }}"
+    target="_blank"
+    >GitHub Link<mat-icon class="ml-4">open_in_new</mat-icon></a
   >
-    <a
-      matButton="filled"
-      class="flex align-middle"
-      href="{{ gitHubLink }}"
-      target="_blank"
-      >GitHub Link<mat-icon class="ml-4">open_in_new</mat-icon></a
-    >
-  </div>
 </div>
