@@ -1,6 +1,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.dev/guide/theming
 @use "@angular/material" as mat;
+@include mat.core();
 
 html {
   @include mat.theme(
@@ -20,6 +21,14 @@ html {
   @include mat.menu-overrides(
     (
       container-color: #1b3124,
+    )
+  );
+}
+
+.dark {
+  @include mat.icon-button-overrides(
+    (
+      hover-state-layer-opacity: white,
     )
   );
 }

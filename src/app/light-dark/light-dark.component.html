@@ -1,0 +1,20 @@
+<!-- <div class="text-black border border:green p-2 rounded-xl"> -->
+@if(!isDarkMode){
+<button
+  mat-icon-button
+  aria-label="Light mode"
+  class="block dark:hidden"
+  (click)="toggleDarkMode()"
+>
+  <mat-icon class="light-mode">light_mode</mat-icon>
+</button>
+} @if(isDarkMode){
+<button
+  mat-icon-button
+  aria-label="Dark mode"
+  class="hidden dark:block"
+  (click)="toggleDarkMode()"
+>
+  <mat-icon class="dark-mode">dark_mode</mat-icon>
+</button>
+}

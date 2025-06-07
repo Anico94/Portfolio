@@ -29,15 +29,9 @@ import { ContactComponent } from './contact/contact.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  isDarkMode = false;
+  isDarkMode = true;
   faCoffee = faCoffee;
-
-  toggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode;
-    if (this.isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+  ngOnInit(): void {
+    document.documentElement.classList.add('dark');
   }
 }
