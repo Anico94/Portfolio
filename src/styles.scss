@@ -11,9 +11,9 @@
 
 @layer components {
   .icon {
-    @apply rounded-xl bg-green-300 dark:bg-green-600 h-12 w-12 flex justify-center items-center 
-    transition-all duration-400 hover:rounded-2xl hover:bg-green-500 dark:hover:bg-green-300 active:scale-90 
-    hover:inset-shadow-xs shadow-sm cursor-pointer dark:text-black hover:scale-110;
+    @apply rounded-xl bg-[#122118] dark:bg-white h-8 w-8 flex justify-center items-center 
+    transition-all duration-400 hover:rounded-2xl hover:bg-green-700 dark:hover:bg-green-200 active:scale-90 
+    hover:inset-shadow-xs shadow-sm cursor-pointer text-white dark:text-[#122118] hover:scale-110;
   }
   .hover-scale-by-10 {
     @apply transition-transform transform hover:scale-110 duration-400 cursor-pointer;
@@ -53,4 +53,13 @@ html {
 .wave {
   transform-origin: 70% 70%;
   animation: wave 1.5s infinite ease-in-out;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

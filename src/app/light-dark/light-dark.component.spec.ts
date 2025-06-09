@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NameComponent } from './name.component';
+import { LightDarkComponent } from './light-dark.component';
 
-describe('NameComponent', () => {
-  let component: NameComponent;
-  let fixture: ComponentFixture<NameComponent>;
+describe('LightDarkComponent', () => {
+  let component: LightDarkComponent;
+  let fixture: ComponentFixture<LightDarkComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NameComponent]
+      imports: [LightDarkComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NameComponent);
+    fixture = TestBed.createComponent(LightDarkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

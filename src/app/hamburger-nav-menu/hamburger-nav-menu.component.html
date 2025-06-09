@@ -1,0 +1,55 @@
+<button
+  matIconButton
+  [matMenuTriggerFor]="menu"
+  aria-label="Example icon-button with a menu"
+>
+  <fa-icon
+    [icon]="faBars"
+    class="fa-lg dark:text-white text-[#122118]"
+  ></fa-icon>
+</button>
+<mat-menu
+  class="mt-4 py-0 rounded-lg border border-[#366348]"
+  #menu="matMenu"
+  xPosition="before"
+>
+  <app-hamburger-menu-item
+    label="About Me"
+    link="#about"
+    [fontAwesomeIcon]="faAboutMe"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
+    label="Projects"
+    link="#projects"
+    [fontAwesomeIcon]="faProjects"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
+    label="Contact Me"
+    link="#contact"
+    [fontAwesomeIcon]="faContactMe"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
+    label="LinkedIn"
+    [newTab]="true"
+    link="https://www.linkedin.com/in/alexnicolaidis/"
+    [fontAwesomeIcon]="faLinkedin"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
+    label="GitHub"
+    [newTab]="true"
+    link="https://www.github.com/Anico94/"
+    [fontAwesomeIcon]="faGithub"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
+    label="Email"
+    [newTab]="true"
+    link="mailto:a.nicolaidis@outlook.com"
+    [fontAwesomeIcon]="faEnvelope"
+  ></app-hamburger-menu-item>
+  <app-hamburger-menu-item
+    label="Resume"
+    [newTab]="true"
+    link="./Alex_Nicolaidis_Resume_2025.pdf"
+    [fontAwesomeIcon]="faFileLines"
+  ></app-hamburger-menu-item>
+</mat-menu>
