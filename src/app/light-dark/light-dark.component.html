@@ -1,5 +1,5 @@
 <!-- <div class="text-black border border:green p-2 rounded-xl"> -->
-@if(!isDarkMode){
+@if(!lightDarkModeState.isDarkMode){
 <button
   mat-icon-button
   aria-label="Light mode"
@@ -8,7 +8,7 @@
 >
   <mat-icon class="light-mode">light_mode</mat-icon>
 </button>
-} @if(isDarkMode){
+} @if(lightDarkModeState.isDarkMode){
 <button
   mat-icon-button
   aria-label="Dark mode"

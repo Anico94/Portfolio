@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatButtonModule, MatFabButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
+import { LightDarkModeService } from '../light-dark-mode.service';
 
 @Component({
   selector: 'app-light-dark',
@@ -9,11 +10,11 @@ import { MatIcon } from '@angular/material/icon';
   styleUrl: './light-dark.component.scss',
 })
 export class LightDarkComponent {
-  public isDarkMode: boolean = true;
+  constructor(public lightDarkModeState: LightDarkModeService) {}
 
   toggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode;
-    if (this.isDarkMode) {
+    this.lightDarkModeState.isDarkMode = !this.lightDarkModeState.isDarkMode;
+    if (this.lightDarkModeState.isDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
