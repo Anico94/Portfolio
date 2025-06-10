@@ -8,30 +8,57 @@
       reach out to me via email or connect with me on LinkedIn. I look forward
       to hearing from you!
     </p>
-    <div class="flex flex-wrap items-end gap-4 px-8 py-3">
-      <label class="flex flex-col min-w-40 flex-1">
-        <input
-          placeholder="Your Email"
-          class="form-input flex w-full min-w-0 flex-1 overflow-hidden rounded-xl focus:outline-[#122118] focus:outline-1 bg-green-100 dark:bg-[#264532] h-14 placeholder:text-green-700 dark:placeholder:text-[#96c5a9] p-4"
-          value=""
-        />
-      </label>
-    </div>
-    <div class="flex flex-wrap items-end gap-4 px-8 py-3">
-      <label class="flex flex-col min-w-40 flex-1">
-        <textarea
-          placeholder="Your Message"
-          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl focus:outline-[#122118] focus:outline-1 bg-green-100 dark:bg-[#264532] focus:border-none min-h-36 dark:placeholder:text-[#96c5a9] placeholder:text-green-700 p-4 text-base font-normal leading-normal"
-        ></textarea>
-      </label>
-    </div>
-    <div class="flex px-8 py-3 justify-end">
-      <button
-        class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#38e07b] text-[#122118] text-sm font-bold leading-normal tracking-[0.015em]"
-      >
-        <span>Send</span>
-      </button>
-    </div>
+    <form [formGroup]="contactForm" (ngSubmit)="onSend()">
+      <div class="flex flex-wrap items-end gap-4 px-8 py-3">
+        <label for="email" class="flex flex-col min-w-40 flex-1">
+          <input
+            id="email"
+            type="email"
+            required
+            email
+            formControlName="email"
+            placeholder="Your Email"
+            class="form-input flex w-full min-w-0 flex-1 overflow-hidden rounded-xl focus:outline-[#122118] focus:outline-1 bg-green-100 dark:bg-[#264532] h-14 placeholder:text-green-700 dark:placeholder:text-[#96c5a9] p-4"
+          />
+        </label>
+      </div>
+      <div class="flex flex-wrap items-end gap-4 px-8 py-3">
+        <label for="message" class="flex flex-col min-w-40 flex-1">
+          <textarea
+            id="message"
+            type="text"
+            required
+            formControlName="message"
+            placeholder="Your Message"
+            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl focus:outline-[#122118] focus:outline-1 bg-green-100 dark:bg-[#264532] focus:border-none min-h-36 dark:placeholder:text-[#96c5a9] placeholder:text-green-700 p-4 text-base font-normal leading-normal"
+          ></textarea>
+        </label>
+      </div>
+      @if(email?.invalid && (email?.dirty || email?.touched)){
+      <div>
+        @if(email?.hasError("required")){
+        <span>Email is required</span>
+        } @if(email?.hasError("email")){
+        <span>Not a valid email</span>
+        }
+      </div>
+      } @if(message?.invalid && (message?.dirty || message?.touched)){
+      <div>
+        @if(message?.hasError("required")){
+        <span>Message is required</span>
+        }
+      </div>
+      }
+      <div class="flex px-8 py-3 justify-end">
+        <button
+          type="submit"
+          [disabled]="!contactForm.valid"
+          class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#38e07b] text-[#122118] text-sm font-bold leading-normal tracking-[0.015em]"
+        >
+          <span>Send</span>
+        </button>
+      </div>
+    </form>
   </div>
   <div
     class="flex-4 border border-[#122118] max-[1000px]:flex-none mx-4 max-[1000px]:w-60/100 aspect-square rounded-full overflow-hidden @[480px]:h-auto @[480px]:min-w-[400px]"
