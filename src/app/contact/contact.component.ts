@@ -10,12 +10,22 @@ import { Validators } from '@angular/forms';
 })
 export class ContactComponent {
   contactForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    message: new FormControl('', Validators.required),
+    email: new FormControl('', {
+      validators: [Validators.required, Validators.email],
+      updateOn: 'submit',
+    }),
+    message: new FormControl('', {
+      validators: Validators.required,
+      updateOn: 'submit',
+    }),
   });
 
   public onSend(): void {
     console.log('Send Pressed');
+  }
+
+  public checkValidity(event: Event) {
+    console.log(event);
   }
 
   get email() {

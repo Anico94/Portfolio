@@ -18,6 +18,7 @@
             email
             formControlName="email"
             placeholder="Your Email"
+            (input)="checkValidity($event)"
             class="form-input flex w-full min-w-0 flex-1 overflow-hidden rounded-xl focus:outline-[#122118] focus:outline-1 bg-green-100 dark:bg-[#264532] h-14 placeholder:text-green-700 dark:placeholder:text-[#96c5a9] p-4"
           />
         </label>
@@ -52,7 +53,6 @@
       <div class="flex px-8 py-3 justify-end">
         <button
           type="submit"
-          [disabled]="!contactForm.valid"
           class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#38e07b] text-[#122118] text-sm font-bold leading-normal tracking-[0.015em]"
         >
           <span>Send</span>
