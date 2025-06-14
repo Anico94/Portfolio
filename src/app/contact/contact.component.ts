@@ -9,10 +9,12 @@ import { Validators } from '@angular/forms';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  public submitAttempted = false;
+
   contactForm = new FormGroup({
     email: new FormControl('', {
       validators: [Validators.required, Validators.email],
-      updateOn: 'submit',
+      updateOn: 'change',
     }),
     message: new FormControl('', {
       validators: Validators.required,
@@ -22,9 +24,13 @@ export class ContactComponent {
 
   public onSend(): void {
     console.log('Send Pressed');
+    this.submitAttempted = true;
   }
 
   public checkValidity(event: Event) {
+    if (!this.email?.hasError('email')) {
+      this.submitAttempted = false;
+    }
     console.log(event);
   }
 

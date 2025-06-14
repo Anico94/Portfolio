@@ -35,7 +35,7 @@
           ></textarea>
         </label>
       </div>
-      @if(email?.invalid && (email?.dirty || email?.touched)){
+      @if(email?.invalid && submitAttempted){
       <div>
         @if(email?.hasError("required")){
         <span>Email is required</span>
