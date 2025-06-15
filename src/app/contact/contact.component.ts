@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { MatIcon } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MatIcon, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -18,20 +20,12 @@ export class ContactComponent {
     }),
     message: new FormControl('', {
       validators: Validators.required,
-      updateOn: 'submit',
+      updateOn: 'change',
     }),
   });
 
   public onSend(): void {
-    console.log('Send Pressed');
     this.submitAttempted = true;
-  }
-
-  public checkValidity(event: Event) {
-    if (!this.email?.hasError('email')) {
-      this.submitAttempted = false;
-    }
-    console.log(event);
   }
 
   get email() {

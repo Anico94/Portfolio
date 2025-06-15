@@ -17,12 +17,28 @@
             required
             email
             formControlName="email"
-            placeholder="Your Email"
-            (input)="checkValidity($event)"
+            placeholder="Your email"
+            [ngClass]="{
+              'border border-red-500': email?.invalid && submitAttempted
+            }"
             class="form-input flex w-full min-w-0 flex-1 overflow-hidden rounded-xl focus:outline-[#122118] focus:outline-1 bg-green-100 dark:bg-[#264532] h-14 placeholder:text-green-700 dark:placeholder:text-[#96c5a9] p-4"
           />
         </label>
       </div>
+      @if(email?.invalid && submitAttempted){
+      <div class="px-8 text-red-400">
+        @if(email?.hasError("email") || email?.hasError("required")){
+        <span class="inline-flex items-center gap-1"
+          ><mat-icon
+            aria-hidden="false"
+            aria-label="Error Icon"
+            fontIcon="error"
+          ></mat-icon>
+          Please enter a valid email address</span
+        >
+        }
+      </div>
+      }
       <div class="flex flex-wrap items-end gap-4 px-8 py-3">
         <label for="message" class="flex flex-col min-w-40 flex-1">
           <textarea
@@ -30,23 +46,25 @@
             type="text"
             required
             formControlName="message"
-            placeholder="Your Message"
-            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl focus:outline-[#122118] focus:outline-1 bg-green-100 dark:bg-[#264532] focus:border-none min-h-36 dark:placeholder:text-[#96c5a9] placeholder:text-green-700 p-4 text-base font-normal leading-normal"
+            placeholder="Your message"
+            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl focus:outline-[#122118] focus:outline-1 bg-green-100 dark:bg-[#264532] min-h-36 dark:placeholder:text-[#96c5a9] placeholder:text-green-700 p-4 text-base font-normal leading-normal"
+            [ngClass]="{
+              'border border-red-500': message?.invalid && submitAttempted
+            }"
           ></textarea>
         </label>
       </div>
-      @if(email?.invalid && submitAttempted){
-      <div>
-        @if(email?.hasError("required")){
-        <span>Email is required</span>
-        } @if(email?.hasError("email")){
-        <span>Not a valid email</span>
-        }
-      </div>
-      } @if(message?.invalid && (message?.dirty || message?.touched)){
-      <div>
+      @if(message?.invalid && submitAttempted){
+      <div class="px-8 text-red-400">
         @if(message?.hasError("required")){
-        <span>Message is required</span>
+        <span class="inline-flex items-center gap-1"
+          ><mat-icon
+            aria-hidden="false"
+            aria-label="Error Icon"
+            fontIcon="error"
+          ></mat-icon>
+          Please add a message</span
+        >
         }
       </div>
       }
