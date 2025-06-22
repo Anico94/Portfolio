@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { MatIcon } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ContactConfirmationSnackBarComponent } from '../contact-confirmation-snack-bar/contact-confirmation-snack-bar.component';
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +14,9 @@ import { CommonModule } from '@angular/common';
 })
 export class ContactComponent {
   public submitAttempted = false;
+
+  private _contactConfirmationSnackBar = inject(MatSnackBar);
+  public durationInSeconds: number = 5;
 
   contactForm = new FormGroup({
     email: new FormControl('', {
@@ -26,6 +31,15 @@ export class ContactComponent {
 
   public onSend(): void {
     this.submitAttempted = true;
+
+    if (this.contactForm.valid) {
+      this._contactConfirmationSnackBar.openFromComponent(
+        ContactConfirmationSnackBarComponent,
+        {
+          duration: this.durationInSeconds * 1000,
+        }
+      );
+    }
   }
 
   get email() {
