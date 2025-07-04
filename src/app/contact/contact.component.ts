@@ -5,6 +5,7 @@ import { MatIcon } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ContactConfirmationSnackBarComponent } from '../contact-confirmation-snack-bar/contact-confirmation-snack-bar.component';
+import { EmailService } from '../email.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +14,8 @@ import { ContactConfirmationSnackBarComponent } from '../contact-confirmation-sn
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  constructor(private emailService: EmailService) {}
+
   public submitAttempted = false;
 
   private _contactConfirmationSnackBar = inject(MatSnackBar);
@@ -33,6 +36,10 @@ export class ContactComponent {
     this.submitAttempted = true;
 
     if (this.contactForm.valid) {
+      this.emailService.sendEmail(
+        this.email?.value ?? '',
+        this.message?.value ?? ''
+      );
       this._contactConfirmationSnackBar.openFromComponent(
         ContactConfirmationSnackBarComponent,
         {
