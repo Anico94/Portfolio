@@ -23,6 +23,21 @@ html {
       container-color: #1b3124,
     )
   );
+
+  @include mat.snack-bar-overrides(
+    (
+      container-color: green,
+      supporting-text-color: white,
+    )
+  );
+}
+
+app-contact-confirmation-snack-bar {
+  @include mat.icon-overrides(
+    (
+      color: white,
+    )
+  );
 }
 
 .dark {

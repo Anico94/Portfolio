@@ -1,0 +1,15 @@
+<div class="flex flex-row gap-4 items-center rounded-sm">
+  <span class="" matSnackBarLabel
+    >Sorry, there was an error sending your message. Please try again.</span
+  >
+  <span matSnackBarActions>
+    <button
+      mat-icon-button
+      aria-label="Close Icon"
+      matSnackBarAction
+      (click)="contactErrorSnackBar.dismissWithAction()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </span>
+</div>
