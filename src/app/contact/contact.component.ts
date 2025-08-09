@@ -5,6 +5,7 @@ import { MatIcon } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ContactConfirmationSnackBarComponent } from '../contact-confirmation-snack-bar/contact-confirmation-snack-bar.component';
+import { ContactErrorSnackBarComponent } from '../contact-error-snack-bar/contact-error-snack-bar.component';
 import { EmailService } from '../email.service';
 
 @Component({
@@ -36,16 +37,28 @@ export class ContactComponent {
     this.submitAttempted = true;
 
     if (this.contactForm.valid) {
-      this.emailService.sendEmail(
-        this.email?.value ?? '',
-        this.message?.value ?? ''
-      );
-      this._contactConfirmationSnackBar.openFromComponent(
-        ContactConfirmationSnackBarComponent,
-        {
-          duration: this.durationInSeconds * 1000,
-        }
-      );
+      this.emailService
+        .sendEmail(this.email?.value ?? '', this.message?.value ?? '')
+        .then(() => {
+          this._contactConfirmationSnackBar.openFromComponent(
+            ContactConfirmationSnackBarComponent,
+            {
+              duration: this.durationInSeconds * 1000,
+            }
+          );
+          this.submitAttempted = false;
+          this.contactForm.reset();
+        })
+        .catch((error) => {
+          this._contactConfirmationSnackBar.openFromComponent(
+            ContactErrorSnackBarComponent,
+            {
+              duration: this.durationInSeconds * 1000,
+            }
+          );
+          this.submitAttempted = false;
+          console.error('Email sending failed:', error);
+        });
     }
   }
 

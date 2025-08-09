@@ -9,31 +9,44 @@ export class EmailService {
   public emailJStemplateId: string = environment.emailJStemplateId;
   public emailJSPublicAPIKey: string = environment.emailJSPublicAPIKey;
 
+  private lastEmailTime: number = 0;
+  private readonly throttleDelay: number = 2000;
+
   constructor() {
     emailjs.init({
       publicKey: this.emailJSPublicAPIKey,
-      limitRate: {
-        id: 'app',
-        throttle: 5000,
-      },
     });
   }
 
-  sendEmail(userEmail: string, message: string) {
+  sendEmail(
+    userEmail: string,
+    message: string
+  ): Promise<EmailJSResponseStatus> {
+    const now = Date.now();
+    const timeSinceLastEmail = now - this.lastEmailTime;
+
+    if (timeSinceLastEmail < this.throttleDelay) {
+      const remainingTime = this.throttleDelay - timeSinceLastEmail;
+      return Promise.reject(
+        new Error(
+          `Please wait ${Math.ceil(
+            remainingTime / 1000
+          )} seconds before sending another email.`
+        )
+      );
+    }
+
+    this.lastEmailTime = now;
+
     const templateParams = {
       userEmail,
       message,
     };
 
-    emailjs
-      .send(this.emailJSServiceId, this.emailJStemplateId, templateParams)
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', (error as EmailJSResponseStatus).text);
-        }
-      );
+    return emailjs.send(
+      this.emailJSServiceId,
+      this.emailJStemplateId,
+      templateParams
+    );
   }
 }
