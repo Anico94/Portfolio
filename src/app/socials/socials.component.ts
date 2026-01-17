@@ -23,5 +23,5 @@ export class SocialsComponent {
   public gitHub: string = 'https://github.com/Anico94';
   public linkedIn: string = 'https://www.linkedin.com/in/alexnicolaidis/';
   public email: string = 'mailto:a.nicolaidis@outlook.com';
-  public resume: string = './Alex_Nicolaidis_Resume_2025.pdf';
+  public resume: string = './Alex_Nicolaidis_Resume_2026.pdf';
 }
