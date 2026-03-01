@@ -1,0 +1,28 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .main { fill: #1F2937; }
+      .accent { fill: #374151; }
+      .highlight { fill: #9CA3AF; }
+      .stroke { stroke: #111; stroke-width: 6; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Outer solid block -->
+  <rect x="50" y="50" width="200" height="200" rx="20" class="main stroke"/>
+
+  <!-- Inner layered blocks (represent tightly coupled layers) -->
+  <rect x="80" y="80" width="140" height="40" rx="8" class="accent"/>
+  <rect x="80" y="130" width="140" height="40" rx="8" class="accent"/>
+  <rect x="80" y="180" width="140" height="40" rx="8" class="accent"/>
+
+  <!-- Center cube (core system) -->
+  <g class="stroke" fill="#EAB308">
+    <polygon points="150,110 180,125 150,140 120,125"/>
+    <polygon points="120,125 120,160 150,175 150,140"/>
+    <polygon points="180,125 180,160 150,175 150,140"/>
+  </g>
+
+  <!-- Subtle top highlight -->
+  <rect x="50" y="50" width="200" height="40" rx="20" class="highlight" opacity="0.15"/>
+</svg>
