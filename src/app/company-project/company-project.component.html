@@ -1,0 +1,20 @@
+<div
+  class="container flex justify-between items-center gap-10 max-[1000px]:flex-col my-10 px-8 text-[#122118] dark:text-white"
+  [ngClass]="{ 'flex-row-reverse': reversed, 'flex-row': !reversed }"
+>
+  <div
+    class="text-justify max-[500px]:text-left flex flex-5 max-[1000px]:flex-none flex-col gap-3 @[480px]:gap-8 @[864px]:flex-row"
+  >
+    <h4 class="font-bold">{{ projectName }}</h4>
+    <ng-content></ng-content>
+  </div>
+  <div
+    class="flex-2 max-[1000px]:flex-none max-[1000px]:w-85/100 aspect-square rounded-xl overflow-hidden @[480px]:h-auto @[480px]:min-w-[400px] border border-[#122118"
+  >
+    <img
+      src="{{ imagePath }}"
+      alt="Project Image"
+      class="w-full h-full object-cover"
+    />
+  </div>
+</div>

@@ -7,16 +7,17 @@ import {
   FontAwesomeModule,
   IconDefinition,
 } from '@fortawesome/angular-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
   faCircleUser,
   faComment,
   faDiagramProject,
   faEnvelope,
+  faFileLines,
+  faBars,
+  faBuilding,
+  faScrewdriverWrench,
 } from '@fortawesome/free-solid-svg-icons';
-import { faFileLines } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-hamburger-nav-menu',
@@ -39,4 +40,6 @@ export class HamburgerNavMenuComponent {
   public faAboutMe: IconDefinition = faCircleUser;
   public faProjects: IconDefinition = faDiagramProject;
   public faContactMe: IconDefinition = faComment;
+  public faBuilding: IconDefinition = faBuilding;
+  public faTools: IconDefinition = faScrewdriverWrench;
 }

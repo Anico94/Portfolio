@@ -1,0 +1,16 @@
+<div
+  class="text-[#122118] dark:text-white text-[18px] font-bold px-8 pb-2 flex min-[950px]:justify-between max-[950px]:flex-col"
+>
+  <div class="flex min-[950px]:flex-row max-[950px]:flex-col">
+    <div>{{ companyName }}</div>
+    <!--html space character-->
+    <p class="max-[950px]:hidden">&nbsp;-&nbsp;</p>
+    <div>{{ jobTitle }}</div>
+  </div>
+  <div>{{ tenure }}</div>
+</div>
+<div
+  class="text-[#122118] dark:text-white text-[16px] px-8 text-justify max-[500px]:text-left"
+>
+  <ng-content></ng-content>
+</div>
