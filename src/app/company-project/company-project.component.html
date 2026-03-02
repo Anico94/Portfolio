@@ -1,10 +1,11 @@
 <div
-  class="container flex flex-row-reverse justify-between items-center gap-10 max-[1000px]:flex-col pt-6 pb-4 px-8 text-[#122118] dark:text-white"
+  class="container flex justify-between items-center gap-10 max-[1000px]:flex-col my-10 px-8 text-[#122118] dark:text-white"
+  [ngClass]="{ 'flex-row-reverse': reversed, 'flex-row': !reversed }"
 >
   <div
-    class="flex flex-5 max-[1000px]:flex-none flex-col gap-3 @[480px]:gap-8 @[864px]:flex-row"
+    class="text-justify max-[500px]:text-left flex flex-5 max-[1000px]:flex-none flex-col gap-3 @[480px]:gap-8 @[864px]:flex-row"
   >
-    <h4 class="font-bold">Project: {{ projectName }}</h4>
+    <h4 class="font-bold">{{ projectName }}</h4>
     <ng-content></ng-content>
   </div>
   <div
