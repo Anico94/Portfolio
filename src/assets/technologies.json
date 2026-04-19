@@ -1,0 +1,184 @@
+{
+  "categories": [
+    {
+      "categoryName": "Backend",
+      "technologies": [
+        {
+          "name": "C#",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+          "altText": "C# Icon"
+        },
+        {
+          "name": ".NET/.NET Core",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg",
+          "altText": ".NET Core Icon"
+        },
+        {
+          "name": "EF and EF Core",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/entityframeworkcore/entityframeworkcore-original.svg",
+          "altText": "Entity Framework Core Icon"
+        },
+        {
+          "name": "OpenAPI",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg",
+          "altText": "OpenAPI Icon"
+        },
+        {
+          "name": "RabbitMQ",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg",
+          "altText": "RabbitMQ Icon"
+        },
+        {
+          "name": "Azure Service Bus",
+          "svgSourceLink": "azure-service-bus.svg",
+          "altText": "Azure Service Bus Icon"
+        },
+        {
+          "name": "xUnit",
+          "svgSourceLink": "xUnit-logo.png",
+          "altText": "xUnit Icon"
+        },
+        {
+          "name": "NSubstitue",
+          "svgSourceLink": "nsubstitute-logo.png",
+          "altText": "NSubstitute Icon"
+        },
+        {
+          "name": "Python",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+          "altText": "Python Icon"
+        },
+        {
+          "name": "Postman",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+          "altText": "Postman Icon"
+        }
+      ]
+    },
+    {
+      "categoryName": "Frontend",
+      "technologies": [
+        {
+          "name": "Angular",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg",
+          "altText": "Angular Icon"
+        },
+        {
+          "name": "TypeScript",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+          "altText": "TypeScript Icon"
+        },
+        {
+          "name": "JavaScript",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+          "altText": "JavaScript Icon"
+        },
+        {
+          "name": "RxJS",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rxjs/rxjs-original.svg",
+          "altText": "RxJS Icon"
+        },
+        {
+          "name": "Angular Material",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularmaterial/angularmaterial-original.svg",
+          "altText": "Angular Material Icon"
+        },
+        {
+          "name": "HTML",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+          "altText": "HTML Icon"
+        },
+        {
+          "name": "CSS",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+          "altText": "CSS Icon"
+        },
+        {
+          "name": "Sass",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
+          "altText": "Sass Icon"
+        },
+        {
+          "name": "Tailwind",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+          "altText": "Tailwind CSS Icon"
+        },
+        {
+          "name": "Jest",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
+          "altText": "Jest Icon"
+        }
+      ]
+    },
+    {
+      "categoryName": "Data / DevOps / Other",
+      "technologies": [
+        {
+          "name": "SQL",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+          "altText": "SQL Icon"
+        },
+        {
+          "name": "PostgreSQL",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+          "altText": "PostgreSQL Icon"
+        },
+        {
+          "name": "SQL Server",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
+          "altText": "SQL Server Icon"
+        },
+        {
+          "name": "Docker",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+          "altText": "Docker Icon"
+        },
+        {
+          "name": "GCP",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg",
+          "altText": "Google Cloud Platform Icon"
+        },
+        {
+          "name": "Azure",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
+          "altText": "Azure Icon"
+        },
+        {
+          "name": "Microservices",
+          "svgSourceLink": "microservice.svg",
+          "altText": "Microservices Icon"
+        },
+        {
+          "name": "Monoliths",
+          "svgSourceLink": "monolith.svg",
+          "altText": "Monoliths Icon"
+        },
+        {
+          "name": "Git",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+          "altText": "Git Icon"
+        },
+        {
+          "name": "GitHub",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+          "altText": "GitHub Icon"
+        },
+        {
+          "name": "GitHub Actions",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg",
+          "altText": "GitHub Actions Icon"
+        },
+        {
+          "name": "Bitbucket",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bitbucket/bitbucket-original.svg",
+          "altText": "Bitbucket Icon"
+        },
+        {
+          "name": "Jira",
+          "svgSourceLink": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg",
+          "altText": "Jira Icon"
+        }
+      ]
+    }
+  ]
+}
